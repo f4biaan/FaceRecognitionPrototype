@@ -18,5 +18,5 @@ En base a un modelo almacenado, o despues de entrenar el modelo se lee el modelo
 
 ## Instalations
 
+* pip install opencv-python
 * pip install flask
-* pip install flask-cors
