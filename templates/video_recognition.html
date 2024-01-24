@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reconocimiento facial</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../static/Assets/0064E7C6-E308-4016-87D0-BBB89FA4B8C0-export.jpg') center/cover; /* Replace 'your-image-url' with the URL of your image */
+        opacity: 0.15; /* Adjust the opacity as needed */
+        z-index: -1;
+      }
+
+      nav {
+        background-color: #ffffff;
+        background-image: linear-gradient(0deg, #ffffff 16%, #97D9E1 33%, #97d9e1 66%, #97d9e1 100%);
+        overflow: hidden;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 1rem;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      nav li {
+        float: right;
+      }
+
+      nav a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease, background-color 0.3s ease;
+      }
+
+      nav a:hover {
+        border-bottom: 2px solid #000;
+        background-color: transparent;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/face-reconocimiento-video">Reconocimiento</a></li>
+        <li><a href="/record-video">Grabar rostros</a></li>
+        <li><a href="/registered-people">Personas registradas</a></li>
+      </ul>
+    </nav>
+    <h1>Reconocimiento Facial</h1>
+
+    <img src="{{ url_for('video_feed') }}" style="height: 500px" />
+  </body>
+</html>
